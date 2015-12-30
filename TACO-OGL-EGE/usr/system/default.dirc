@@ -1,0 +1,16 @@
+display{
+	GLUT_RGBA,
+	GLUT_DOUBLE,
+	GLUT_DEPTH
+}
+
+enable{
+	GL_BLEND,
+	GL_PRIMITIVE_RESTART,
+	GL_DEPTH_TEST
+}
+
+dimensions{
+	1600,
+	900
+}
