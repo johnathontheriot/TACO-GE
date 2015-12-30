@@ -24,6 +24,9 @@
     <ClCompile Include="components\engine\core\system\cpp\Response.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="usr\scripts\Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="components\engine\core\system\h\DirectiveParser.h">

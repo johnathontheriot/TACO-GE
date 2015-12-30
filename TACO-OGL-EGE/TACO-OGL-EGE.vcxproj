@@ -74,6 +74,7 @@
     <ClCompile Include="components\engine\core\system\cpp\DirectiveParser.cpp" />
     <ClCompile Include="components\engine\core\system\cpp\Response.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="usr\scripts\Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="components\engine\core\system\defaults\Constants.h" />
