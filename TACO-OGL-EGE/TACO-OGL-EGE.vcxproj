@@ -74,14 +74,15 @@
     <ClCompile Include="components\engine\core\system\cpp\DirectiveParser.cpp" />
     <ClCompile Include="components\engine\core\system\cpp\Response.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="usr\scripts\Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="components\engine\core\system\defaults\Constants.h" />
     <ClInclude Include="components\engine\core\system\h\DirectiveParser.h" />
     <ClInclude Include="components\engine\core\system\h\Response.h" />
+    <ClInclude Include="components\engine\geometry\h\Geometry.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="header_update.py" />
     <None Include="components\engine\core\system\defaults\default.dirc" />
     <None Include="usr\system\default.dirc" />
   </ItemGroup>

@@ -24,9 +24,6 @@
     <ClCompile Include="components\engine\core\system\cpp\Response.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="usr\scripts\Source.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="components\engine\core\system\h\DirectiveParser.h">
@@ -38,9 +35,13 @@
     <ClInclude Include="components\engine\core\system\defaults\Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="components\engine\geometry\h\Geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="components\engine\core\system\defaults\default.dirc" />
     <None Include="usr\system\default.dirc" />
+    <None Include="header_update.py" />
   </ItemGroup>
 </Project>

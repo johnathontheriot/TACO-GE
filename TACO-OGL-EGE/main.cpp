@@ -25,8 +25,8 @@ Ryan Adair
 /*
 ---------------------------  I N C L U D E S  ------------------------------------------
 Imported:
-glew:		OpenGL Extension Wrangler
-glm:		Temporary Includes pending the bmvl library completion
+	glew:		OpenGL Extension Wrangler
+	glm:		Temporary Includes pending the bmvl library completion
 
 Core:
 
@@ -58,18 +58,12 @@ Geometry:
 ---------------------------------------------------------------------------------------
 */
 
-void
-setStandardInfo(){
-	glEnable(GL_DEPTH_TEST);
-	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-	glEnable(GL_PRIMITIVE_RESTART);
-	glPrimitiveRestartIndex(0xFFFF);
+
+
+
+void animationLoop(){
+	glutPostRedisplay();
 }
-
-
-
-
-
 
 /*
 ------------------------------  M A I N  ----------------------------------------------
@@ -80,37 +74,19 @@ setStandardInfo(){
 int main(int argc, char** argv){
 
 	glutInit(&argc, argv);
-
-#ifdef MONOSCOPIC
-	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH);
-#else
-	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH | GLUT_STEREO);
-#endif
-
 	DirectiveParser::Parse();
-	glutInitWindowSize(100, 100);
-
+	glutInitWindowSize(W, H);
 	glutInitContextVersion(3, 3);
 	glutInitContextProfile(GLUT_CORE_PROFILE);
-
+	glutIdleFunc(animationLoop);
 	glutCreateWindow("OpenGL EGE");
-	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glewExperimental = GL_TRUE;
 	if (glewInit())
 		exit(EXIT_FAILURE);
-
-	//setCallbackFunctions();
-
-	setStandardInfo();
-
 #ifndef MONOSCOPIC
 	glutFullScreen();
 #endif
-
-	//initializeObjects();
-
 	glutMainLoop();
-
 	return 0;
 }
