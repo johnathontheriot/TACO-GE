@@ -24,6 +24,21 @@
     <ClCompile Include="components\engine\core\system\cpp\Response.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="components\engine\core\core\h\FrameBuffer.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="components\engine\core\system\cpp\SceneResponse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="components\engine\core\core\cpp\SceneManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="components\engine\core\core\cpp\SceneID.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="components\engine\core\core\cpp\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="components\engine\core\system\h\DirectiveParser.h">
@@ -36,6 +51,30 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="components\engine\geometry\h\Geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\ID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\GLobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\ObjectID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\SceneManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\SceneID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\system\h\SceneResponse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\FrameID.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

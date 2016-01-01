@@ -16,17 +16,18 @@
 
 class ShaderProgram{
 public:
-
+	ShaderProgram();
+	Response AddShader(Shader * Shader);
 	Response AddVariable(std::string varName);
 	Response RemoveVariable(std::string varName);
-	Shader getShader(GLenum shaderType);
+	Shader * getShader(GLenum shaderType);
 
 private:
 
 protected:
 	GLuint id;
-	std::unordered_map<std::string, ShaderInput> variables;
-	std::vector<Shader> shaders;
+	std::unordered_map<std::string, ShaderInput*> variables;
+	std::vector<Shader*> shaders;
 
 };
 

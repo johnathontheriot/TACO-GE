@@ -71,14 +71,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="components\engine\core\core\cpp\Scene.cpp" />
+    <ClCompile Include="components\engine\core\core\cpp\SceneID.cpp" />
+    <ClCompile Include="components\engine\core\core\cpp\SceneManager.cpp" />
+    <ClCompile Include="components\engine\core\core\h\FrameBuffer.h" />
     <ClCompile Include="components\engine\core\system\cpp\DirectiveParser.cpp" />
     <ClCompile Include="components\engine\core\system\cpp\Response.cpp" />
+    <ClCompile Include="components\engine\core\system\cpp\SceneResponse.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="components\engine\core\core\h\FrameID.h" />
+    <ClInclude Include="components\engine\core\core\h\GLobject.h" />
+    <ClInclude Include="components\engine\core\core\h\ID.h" />
+    <ClInclude Include="components\engine\core\core\h\ObjectID.h" />
+    <ClInclude Include="components\engine\core\core\h\Scene.h" />
+    <ClInclude Include="components\engine\core\core\h\SceneID.h" />
+    <ClInclude Include="components\engine\core\core\h\SceneManager.h" />
     <ClInclude Include="components\engine\core\system\defaults\Constants.h" />
     <ClInclude Include="components\engine\core\system\h\DirectiveParser.h" />
     <ClInclude Include="components\engine\core\system\h\Response.h" />
+    <ClInclude Include="components\engine\core\system\h\SceneResponse.h" />
     <ClInclude Include="components\engine\geometry\h\Geometry.h" />
   </ItemGroup>
   <ItemGroup>

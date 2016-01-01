@@ -24,7 +24,7 @@ using namespace std;
 typedef enum{
 	VALID = 0,	//A valid Response
 	INVALID,	//An invalid Response
-	UNDEFINED		//An undetermined Response
+	UNDEFINED	//An undetermined Response
 } ResponseType;
 
 class Response{

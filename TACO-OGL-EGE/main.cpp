@@ -20,8 +20,6 @@ Ryan Adair
 ----------------------------------------------------------------------------------------
 **/
 
-
-
 /*
 ---------------------------  I N C L U D E S  ------------------------------------------
 Imported:
@@ -39,10 +37,7 @@ Geometry:
 
 #include "components\engine\core\system\defaults\Constants.h"
 
-
 //-------------------------  I M P O R T E D  -----------------------------------------
-
-
 
 //-------------------------  G E O M E T R Y  -----------------------------------------
 
@@ -51,18 +46,18 @@ Geometry:
 #include "components\engine\core\system\h\DirectiveParser.h"
 #include "components\engine\core\system\h\Response.h"
 
-
 /*
 --------------------------  F R E E   F U N C T I O N S  ------------------------------
 
 ---------------------------------------------------------------------------------------
 */
 
+void _animate(){
 
+}
 
-
-void animationLoop(){
-	glutPostRedisplay();
+void initializeCallbacks(){
+	glutIdleFunc(_animate);
 }
 
 /*
@@ -72,13 +67,11 @@ void animationLoop(){
 */
 
 int main(int argc, char** argv){
-
 	glutInit(&argc, argv);
 	DirectiveParser::Parse();
 	glutInitWindowSize(W, H);
 	glutInitContextVersion(3, 3);
 	glutInitContextProfile(GLUT_CORE_PROFILE);
-	glutIdleFunc(animationLoop);
 	glutCreateWindow("OpenGL EGE");
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glewExperimental = GL_TRUE;
