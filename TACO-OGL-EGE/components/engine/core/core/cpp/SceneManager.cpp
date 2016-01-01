@@ -44,6 +44,10 @@ void SceneManager::listScenes(){
 	std::unordered_map<SceneID, Scene*, SceneIDHasher, SceneIDEq>::const_iterator it;
 	cout << "- - - - - - Scene List - - - - -" << endl;
 	cout << "- - - ( intID : stringID ) - - -" << endl;
+	if (this->scenes->size() == 0){
+		cout << "There are currently no Scenes." << "- - - - - - - - - - - - - - -" << endl << endl;
+		return;
+	}
 	for (it = this->scenes->begin(); it != this->scenes->end(); it++){
 		cout << it->first << endl;
 		cout << "- - - - - - - - - - - - - - -" << endl;
@@ -57,5 +61,4 @@ SceneResponse SceneManager::addScene(Scene * Scene){
 
 SceneResponse SceneManager::updateScene(SceneID oldID, Scene * updatedScene){
 	return SceneResponse();
-
 }

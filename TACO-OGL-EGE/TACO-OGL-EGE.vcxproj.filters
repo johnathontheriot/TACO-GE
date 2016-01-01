@@ -39,6 +39,9 @@
     <ClCompile Include="components\engine\core\core\cpp\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="components\engine\core\core\cpp\FrameBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="components\engine\core\system\h\DirectiveParser.h">

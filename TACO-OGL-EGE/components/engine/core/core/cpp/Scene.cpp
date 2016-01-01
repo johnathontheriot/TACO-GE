@@ -11,7 +11,10 @@ Scene::Scene(){
 }
 
 Scene::Scene(std::string name){
-	//same as () but with initialized name
+	this->id = new SceneID(name);
+	this->renderFrames = new std::unordered_map<FrameID, FrameBuffer*, FrameIDHasher>();
+	//create framebuffer and add it to the renderFrames
+	SceneManager::getInstance().addScene(this);
 }
 
 Response Scene::AddObject(GLobject * object){
@@ -19,6 +22,6 @@ Response Scene::AddObject(GLobject * object){
 		this->objects = new std::unordered_map<ObjectID, GLobject*, ObjectIDHasher>();
 		return Response();
 	}
-	//change here
+	//change here for adding the object
 	return Response();
 }

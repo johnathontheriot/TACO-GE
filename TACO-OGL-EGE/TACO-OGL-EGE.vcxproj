@@ -71,6 +71,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="components\engine\core\core\cpp\FrameBuffer.cpp" />
     <ClCompile Include="components\engine\core\core\cpp\Scene.cpp" />
     <ClCompile Include="components\engine\core\core\cpp\SceneID.cpp" />
     <ClCompile Include="components\engine\core\core\cpp\SceneManager.cpp" />

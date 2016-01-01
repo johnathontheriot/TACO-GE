@@ -56,8 +56,27 @@ void _animate(){
 
 }
 
+void _display(){
+	/**
+		We should probably do something like this:
+
+		call SceneManager::display();
+
+		display() should just iterate through the 
+		scenes. Here we have to talk about how we re going to 
+		actually display. I'd like the Scene to know nothing about displaying itself,
+		but if there isn't a sensible way out of this, then I can deal.
+
+		Whatever we decide, we need to make the display generic. There should be no
+		difference between rendering to texture and rendering to frame 0.
+	**/
+}
+
+
+
 void initializeCallbacks(){
 	glutIdleFunc(_animate);
+	glutDisplayFunc(_display);
 }
 
 /*
