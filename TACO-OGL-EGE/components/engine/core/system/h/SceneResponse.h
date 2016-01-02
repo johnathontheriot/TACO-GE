@@ -7,7 +7,7 @@
 
 class SceneResponse : public Response{
 public:
-	SceneResponse(){};
+	SceneResponse();
 	virtual ~SceneResponse();
 	SceneResponse(ResponseType type, std::string shortMessage, std::string longMessage, Scene * scene);
 

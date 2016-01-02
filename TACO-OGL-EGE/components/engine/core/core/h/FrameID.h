@@ -8,9 +8,9 @@
 
 class FrameID : public ID{
 public:
-	FrameID(){};
-	int getInstanceID() const{ return this->getInstanceID(); };
-	std::string getNameID() const{ return this->getNameID(); };
+	FrameID();
+	int getInstanceID() const;
+	std::string getNameID() const;
 private:
 	static int _f_id;
 protected:
@@ -24,7 +24,7 @@ struct FrameIDHasher{
 	std::size_t operator()(const FrameID & fid) const{
 		std::size_t s = 0;
 		boost::hash_combine(s, boost::hash_value(fid.getInstanceID()));
-		boost::hash_combine(s, hash_value(fid.getNameID()));
+		boost::hash_combine(s, boost::hash_value(fid.getNameID()));
 		return s;
 	}
 };

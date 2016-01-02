@@ -59,5 +59,7 @@ namespace{
 		{ "GL_DEPTH_TEST", GL_DEPTH_TEST }
 	});
 
+	int MaxTextureUnits; 
+	std::unordered_map<std::string, GLenum> * textureUnits;
 }
 #endif

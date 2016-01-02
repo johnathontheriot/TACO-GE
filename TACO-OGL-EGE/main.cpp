@@ -79,6 +79,14 @@ void initializeCallbacks(){
 	glutDisplayFunc(_display);
 }
 
+void genTexMap(){
+	textureUnits = new std::unordered_map<std::string, GLenum>();
+	GLenum en = GL_TEXTURE0;
+	for (int i = 0; i < MaxTextureUnits; i++){
+		textureUnits->insert({ "GL_TEXTURE" + std::to_string(i), en++ });
+	}
+}
+
 /*
 ------------------------------  M A I N  ----------------------------------------------
 
@@ -88,6 +96,8 @@ void initializeCallbacks(){
 int main(int argc, char** argv){
 	glutInit(&argc, argv);
 	DirectiveParser::Parse();
+	glGetIntegerv(GL_MAX_TEXTURE_UNITS, &MaxTextureUnits);
+	genTexMap();
 	glutInitWindowSize(W, H);
 	glutInitContextVersion(3, 3);
 	glutInitContextProfile(GLUT_CORE_PROFILE);

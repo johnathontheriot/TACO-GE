@@ -2,6 +2,7 @@
 #include "../h/SceneID.h"
 #include "../h/SceneManager.h"
 #include "../h/FrameID.h"
+#include "../h/FrameBuffer.h"
 
 Scene::Scene(){
 	this->id = new SceneID();

@@ -1,6 +1,9 @@
 #include "../h/SceneResponse.h"
 #include "../../core/h/Scene.h"
 
+SceneResponse::SceneResponse(){
+}
+
 SceneResponse::SceneResponse(ResponseType type, std::string shortMessage, std::string longMessage, Scene * scene) : Response(type, shortMessage, longMessage){
 	this->scene = scene;
 }

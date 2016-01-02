@@ -42,6 +42,21 @@
     <ClCompile Include="components\engine\core\core\cpp\FrameBuffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="components\engine\core\core\cpp\FrameID.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="components\engine\core\core\cpp\Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="components\engine\core\system\cpp\TextureIDResponse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="components\engine\core\core\cpp\TextureAlbum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="components\engine\core\core\cpp\TextureID.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="components\engine\core\system\h\DirectiveParser.h">
@@ -78,6 +93,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="components\engine\core\core\h\FrameID.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\system\h\TextureIDResponse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\TextureAlbum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="components\engine\core\core\h\TextureID.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
