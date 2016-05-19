@@ -9,7 +9,6 @@
 #include <vector>
 #include <string>
 #include "GLobject.h"
-#include "SceneID.h"
 #include "ObjectID.h"
 #include "FrameID.h"
 #include "../../system/h/Response.h"
@@ -19,19 +18,26 @@
 class Scene{
 public:
 
-	Scene();
-	Scene(std::string name);
 	Response AddObject(GLobject * object);
-
-
-
+	int getInstanceID() const{ return this->instance_id; };
+	std::string getNameID() const { return this->name_id; };
+	Response setNameID(std::string newNameID){ return Response(); };
+	friend std::ostream& operator<<(std::ostream& os, const Scene & sceneid){ return os; };
+	bool operator==(Scene & other) const {
+		return this->getNameID() == other.getNameID();
+	}
+	friend class SceneManager;
 private:
-
+	static int _s_id;
+	Scene();
+	Scene(std::string name_id);
+	Scene(int id, std::string name_id);
 protected:
-	SceneID * id;
+	friend class SceneManager;
 	std::unordered_map<ObjectID, GLobject*, ObjectIDHasher> * objects;
 	std::unordered_map<FrameID, FrameBuffer*, FrameIDHasher> * renderFrames;
-
+	int instance_id;
+	std::string name_id;
 };
 
 

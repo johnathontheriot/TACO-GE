@@ -33,9 +33,6 @@
     <ClCompile Include="components\engine\core\core\cpp\SceneManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="components\engine\core\core\cpp\SceneID.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="components\engine\core\core\cpp\Scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,18 +40,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="components\engine\core\core\cpp\FrameID.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="components\engine\core\core\cpp\Texture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="components\engine\core\system\cpp\TextureIDResponse.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="components\engine\core\core\cpp\TextureAlbum.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="components\engine\core\core\cpp\TextureID.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,25 +71,10 @@
     <ClInclude Include="components\engine\core\core\h\SceneManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="components\engine\core\core\h\SceneID.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="components\engine\core\system\h\SceneResponse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="components\engine\core\core\h\FrameID.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="components\engine\core\core\h\Texture.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="components\engine\core\system\h\TextureIDResponse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="components\engine\core\core\h\TextureAlbum.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="components\engine\core\core\h\TextureID.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

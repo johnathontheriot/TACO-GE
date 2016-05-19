@@ -4,23 +4,23 @@
 #include <string>
 #include <unordered_map>
 #include "ID.h"
-#include "SceneID.h"
 #include "Scene.h"
 #include "../../system/h/SceneResponse.h"
 #include "../../system/h/Response.h"
 #include "../../system/defaults/Constants.h"
-
-
+#include <boost/multi_index_container.hpp>
+#include <boost/multi_index/hashed_index.hpp>
+#include <boost/multi_index/member.hpp>
 //singleton
 class SceneManager{
 public:
 
-	static SceneManager getInstance();
-	SceneResponse getScene(SceneID id);
+	static SceneManager * getInstance();
+	SceneResponse getScene(Scene id);
 	SceneResponse getScene(int id);
 	SceneResponse getScene(std::string id);
-	SceneResponse addScene(Scene * Scene);
-	SceneResponse updateScene(SceneID oldID, Scene * updatedScene);
+	SceneResponse addScene(std::string scene_name);
+	SceneResponse updateScene(Scene oldID, Scene * updatedScene);
 	SceneResponse updateScene(int oldID, Scene * updatedScene);
 	SceneResponse updateScene(std::string oldID, Scene * updatedScene);
 
@@ -31,8 +31,23 @@ private:
 	SceneManager();
 
 protected:
+	typedef boost::multi_index_container<
+		Scene*,
+		boost::multi_index::indexed_by<
+			boost::multi_index::hashed_non_unique<
+				boost::multi_index::member<
+					Scene, std::string, &Scene::name_id
+				>
+			>, 
+			boost::multi_index::hashed_non_unique<
+				boost::multi_index::member<
+					Scene, int, &Scene::instance_id
+				>
+			>
+		>
+	> MultiSceneManager;
 
-	std::unordered_map<SceneID, Scene*, SceneIDHasher, SceneIDEq> * scenes;
+	MultiSceneManager * scenes;
 };
 
 #endif

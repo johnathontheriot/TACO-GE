@@ -10,7 +10,6 @@ public:
 	SceneResponse();
 	virtual ~SceneResponse();
 	SceneResponse(ResponseType type, std::string shortMessage, std::string longMessage, Scene * scene);
-
 	Scene * getScene();
 
 private:

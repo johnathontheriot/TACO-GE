@@ -3,7 +3,6 @@
 
 #include <GL/glew.h>
 #include <GL/freeglut.h>
-#include "Texture.h"
 
 
 class FrameBuffer{
@@ -24,7 +23,6 @@ protected:
 	Textures for the frame to render to, if applicable
 	otherwise, null.
 	**/
-	Texture * textures;
 };
 
 #endif 

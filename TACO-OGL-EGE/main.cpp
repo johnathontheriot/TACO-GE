@@ -44,7 +44,16 @@ Geometry:
 //-------------------------    S Y S T E M    -----------------------------------------
 
 #include "components\engine\core\system\h\DirectiveParser.h"
+#include "components\engine\core\core\h\SceneManager.h"
 #include "components\engine\core\system\h\Response.h"
+
+SceneManager * _sceneManager = NULL;
+
+void _animate();
+void _display();
+void InitializeSystem();
+void InitializeCallbacks();
+void genTexMap();
 
 /*
 --------------------------  F R E E   F U N C T I O N S  ------------------------------
@@ -72,7 +81,12 @@ void _display(){
 	**/
 }
 
-
+void InitializeSystem(){
+	DirectiveParser::Parse();
+	glGetIntegerv(GL_MAX_TEXTURE_UNITS, &MaxTextureUnits);
+	genTexMap();
+	_sceneManager = SceneManager::getInstance();
+}
 
 void initializeCallbacks(){
 	glutIdleFunc(_animate);
@@ -95,9 +109,8 @@ void genTexMap(){
 
 int main(int argc, char** argv){
 	glutInit(&argc, argv);
-	DirectiveParser::Parse();
-	glGetIntegerv(GL_MAX_TEXTURE_UNITS, &MaxTextureUnits);
-	genTexMap();
+	InitializeSystem();
+	
 	glutInitWindowSize(W, H);
 	glutInitContextVersion(3, 3);
 	glutInitContextProfile(GLUT_CORE_PROFILE);

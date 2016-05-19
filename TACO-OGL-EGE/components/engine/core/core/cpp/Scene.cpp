@@ -1,21 +1,19 @@
 #include "../h/Scene.h"
-#include "../h/SceneID.h"
 #include "../h/SceneManager.h"
 #include "../h/FrameID.h"
 #include "../h/FrameBuffer.h"
 
 Scene::Scene(){
-	this->id = new SceneID();
 	this->renderFrames = new std::unordered_map<FrameID, FrameBuffer*, FrameIDHasher>();
 	//create framebuffer and add it to the renderFrames
-	SceneManager::getInstance().addScene(this);
+	//SceneManager::getInstance().addScene(this);
 }
 
 Scene::Scene(std::string name){
-	this->id = new SceneID(name);
+	this->name_id = name;
 	this->renderFrames = new std::unordered_map<FrameID, FrameBuffer*, FrameIDHasher>();
 	//create framebuffer and add it to the renderFrames
-	SceneManager::getInstance().addScene(this);
+	//SceneManager::getInstance()->addScene(this);
 }
 
 Response Scene::AddObject(GLobject * object){

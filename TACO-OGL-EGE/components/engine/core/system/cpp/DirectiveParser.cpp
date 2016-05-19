@@ -200,7 +200,6 @@ Response DirectiveParser::parse_file(std::ifstream & directive_file){
 	directive_file.get(token);
 	Response tag_res;
 	while (!directive_file.eof() && token != EOF){
-		cout << token;
 		switch (token){
 		case ' ':
 		case '\t':
