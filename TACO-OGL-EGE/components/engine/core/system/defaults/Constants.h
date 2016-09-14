@@ -6,8 +6,10 @@
 **/
 
 using namespace std;
-
 #include <GL/glew.h>
+#include <GL/glfw3.h>
+
+
 #include <GL/freeglut.h>
 #include <glm-0.9.6.3\glm\glm\glm.hpp>
 #include <glm-0.9.6.3\glm\glm\gtc\matrix_transform.hpp>

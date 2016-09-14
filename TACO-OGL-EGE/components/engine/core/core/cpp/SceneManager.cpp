@@ -33,7 +33,6 @@ SceneResponse SceneManager::getScene(int iid){
 	else {
 		return SceneResponse(INVALID, "Scene not found.", "Scene with id " + std::to_string(iid) + " not found.", NULL);
 	}
-
 }
  
 SceneResponse SceneManager::getScene(std::string sid){
@@ -48,23 +47,18 @@ SceneResponse SceneManager::getScene(std::string sid){
 }
 
 void SceneManager::listScenes(){
-	//std::unordered_map<SceneID, Scene*, SceneIDHasher, SceneIDEq>::const_iterator it;
-	//cout << "- - - - - - Scene List - - - - -" << endl;
-	//cout << "- - - ( intID : stringID ) - - -" << endl;
-	//if (this->scenes->size() == 0){
-	//	cout << "There are currently no Scenes." << "- - - - - - - - - - - - - - -" << endl << endl;
-	//	return;
-	//}
-	//for (it = this->scenes->begin(); it != this->scenes->end(); it++){
-	//	cout << it->first << endl;
-	//	cout << "- - - - - - - - - - - - - - -" << endl;
-	//}
-	//cout << endl;
-}
-
-
-SceneResponse SceneManager::updateScene(Scene oldID, Scene * updatedScene){
-	return SceneResponse();
+	auto it = this->scenes->begin();
+	cout << "- - - - - - Scene List - - - - -" << endl;
+	cout << "- - - ( intID : stringID ) - - -" << endl;
+	if (this->scenes->size() == 0){
+		cout << "There are currently no Scenes." << endl << "- - - - - - - - - - - - - - -" << endl << endl;
+		return;
+	}
+	for (it; it != this->scenes->end(); it++){
+		cout << std::to_string((*it)->getInstanceID()) << " : " << (*it)->getNameID() << endl;
+		cout << "- - - - - - - - - - - - - - -" << endl;
+	}
+	cout << endl;
 }
 
 SceneResponse SceneManager::addScene(std::string sceneName){

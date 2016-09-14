@@ -52,7 +52,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;freeglut.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;freeglut.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\boost\boost_1_60_0\boost_1_60_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -92,6 +92,7 @@
     <ClInclude Include="components\engine\core\system\h\DirectiveParser.h" />
     <ClInclude Include="components\engine\core\system\h\Response.h" />
     <ClInclude Include="components\engine\core\system\h\SceneResponse.h" />
+    <ClInclude Include="components\engine\geometry\h\BufferObject.h" />
     <ClInclude Include="components\engine\geometry\h\Geometry.h" />
   </ItemGroup>
   <ItemGroup>
